@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory_leak_detector"
+version = "1.0.0"
+description = "A Python library that detects memory leaks in Django applications and logs them either locally or to AWS."
+authors = [
+    {name = "Jaideep Singh", email = "jaideep0610s@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.setuptools]
+packages = ["memory_leak_detector"]
+
+[tool.setuptools.packages.find]
+where = ["memory_leak_detector"]
+
+[project.dependencies]
+psutil = ">=5.8.0"
+boto3 = ">=1.18.0"
+
+[tool.setuptools.scripts]
+memory_leak_detector = "memory_leak_detector.memory_leak:MemoryLeakDetector"
