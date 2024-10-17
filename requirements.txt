@@ -1,0 +1,3 @@
+psutil>=5.8.0        # For monitoring memory usage and system processes
+boto3>=1.18.0        # For AWS integration (S3/CloudWatch logging)
+pytest>=6.2.5        # For running tests
